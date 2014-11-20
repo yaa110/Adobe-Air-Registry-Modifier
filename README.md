@@ -21,11 +21,17 @@ This project intended to provide an integration between Adobe Air projects and W
 RegistryModify rm = new RegistryModify("RELATIVE/PATH/TO/process.exe");
 rm.addEventListener("ErrorData", onError);
 
+// onError Listener
+function onError(e:Event):void {
+    trace("Error message:", rm._output);
+}
+
 // Read the value of a Key
 rm.readValue("Root Key", "path_to_key_parent", "key_name");
 rm.addEventListener("OutputData", onReadValue);
 
 function onReadValue(e:Event):void {
+    rm.removeEventListener("OutputData", onReadValue);
     trace("Value:", rm._output);
 }
 
@@ -34,6 +40,7 @@ rm.writeValue("Root Key", "path_to_key_parent", "key_name", "value");
 rm.addEventListener("OutputData", onWriteComplete);
 
 function onWriteComplete(e:Event):void {
+    rm.removeEventListener("OutputData", onWriteComplete);
     trace("Value was written.");
 }
 
@@ -42,6 +49,7 @@ rm.writeDwordValue("Root Key", "path_to_key_parent", "key_name", "value");
 rm.addEventListener("OutputData", onWriteDwordComplete);
 
 function onWriteDwordComplete(e:Event):void {
+    rm.removeEventListener("OutputData", onWriteDwordComplete);
     trace("Value was written.");
 }
 
@@ -50,6 +58,7 @@ rm.deleteKey("Root Key", "path_to_key");
 rm.addEventListener("OutputData", onDeleteComplete);
 
 function onDeleteComplete(e:Event):void {
+    rm.removeEventListener("OutputData", onDeleteComplete);
     trace("Key was deleted.");
 }
 
@@ -58,16 +67,12 @@ rm.checkKey("Root Key", "path_to_key");
 rm.addEventListener("OutputData", onCheckComplete);
 
 function onCheckComplete(e:Event):void {
+    rm.removeEventListener("OutputData", onCheckComplete);
     if (rm._output == "exists") {
         trace("We found the key!");
     } else {
         trace("Key not found.");
     }
-}
-
-// onError Listener
-function onError(e:Event):void {
-    // onError action
 }
 ```
 
