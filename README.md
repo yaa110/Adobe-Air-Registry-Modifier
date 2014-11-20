@@ -7,8 +7,8 @@ This project intended to provide an integration between Adobe Air projects and W
 1. Install [Python 2.7.x](https://www.python.org/downloads/)
 2. Download [py2exe](http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/py2exe-0.6.9.win32-py2.7.exe/download) and install it.
 3. In order to make a standalone `process.exe` file which is used as `NativeProcess` executer, open Command Prompt:
-  * `cd src-python`.
-  * `c:\PATH_TO_PYTHON\python.exe setup.py py2exe`.
+  * `cd src-python`
+  * `c:\PATH_TO_PYTHON\python.exe setup.py py2exe`
 4. Then, `process.exe` would be found in `dist` folder. Copy only `process.exe` file to your Adobe Air project (you don't need to include `.py` files in your Adobe Air project).
 
 **Note:** In Adobe Air manifest file, use `<supportedProfiles>extendedDesktop desktop</supportedProfiles>` to be allowed to use `NativeProcess`.
