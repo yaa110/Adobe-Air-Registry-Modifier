@@ -19,6 +19,56 @@ This project intended to provide an integration between Adobe Air projects and W
 
 ```actionscript3
 RegistryModify rm = new RegistryModify("RELATIVE_PATH_TO_PROCESS.EXE");
+rm.addEventListener("ErrorData", onError);
+
+// Read the value of a Key
+rm.readValue("Root Key", "path_to_key_parent", "key_name");
+rm.addEventListener("OutputData", onReadValue);
+
+function onReadValue(e:Event):void {
+    trace("Value:", rm._output);
+}
+
+// Write a value to a Key
+rm.writeValue("Root Key", "path_to_key_parent", "key_name", "value");
+rm.addEventListener("OutputData", onWriteComplete);
+
+function onWriteComplete(e:Event):void {
+    trace("Value was written.");
+}
+
+// Write a dword value to a Key
+rm.writeDwordValue("Root Key", "path_to_key_parent", "key_name", "value");
+rm.addEventListener("OutputData", onWriteDwordComplete);
+
+function onWriteDwordComplete(e:Event):void {
+    trace("Value was written.");
+}
+
+// Delete a Key
+rm.deleteKey("Root Key", "path_to_key");
+rm.addEventListener("OutputData", onDeleteComplete);
+
+function onDeleteComplete(e:Event):void {
+    trace("Key was deleted.");
+}
+
+// Check if a Key exists
+rm.checkKey("Root Key", "path_to_key");
+rm.addEventListener("OutputData", onCheckComplete);
+
+function onCheckComplete(e:Event):void {
+    if (rm._output == "exists") {
+        trace("We found the key!");
+    } else {
+        trace("Key not found.");
+    }
+}
+
+// onError Listener
+function onError(e:Event):void {
+    // onError action
+}
 ```
 
 + Root Keys (as `_rootkey` parameter): `HKEY_LOCAL_MACHINE`, `HKEY_CLASSES_ROOT`, `HKEY_CURRENT_CONFIG`, `HKEY_CURRENT_USER` and `HKEY_USERS`
