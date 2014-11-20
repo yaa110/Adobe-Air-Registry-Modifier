@@ -1,6 +1,6 @@
 # Adobe Air Registry Modifier
 
-This project intended to provide an integration between Adobe Air projects and Windows Registry by which it is possible to modify Windows Registry in Adobe Air projects. Since Adobe Air is a cross-platform SDK, there is no Class to modify Windows Registry. However, it could be done using `NativeProcess` class and an interface tool between Adobe Air and Windows Registry such as Python.
+This project intended to provide an integration between Adobe Air projects and Windows Registry by which it is possible to modify Windows Registry in Adobe Air projects. Since Adobe Air is a cross-platform SDK, there is no built-in class to modify Windows Registry. However, it could be done using `NativeProcess` class and an interface tool between Adobe Air and Windows Registry such as Python.
 
 ## Installation
 
