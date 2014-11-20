@@ -33,7 +33,7 @@ package org.appsroid {
 			process();
 		}
 
-        public function writeDwordValue(_rootKey:String, _path:String, _key:String, _value:String):void {
+        	public function writeDwordValue(_rootKey:String, _path:String, _key:String, _value:String):void {
 			_args = new Vector.<String>();
 			_args.push("-action:writedword", "-key:" + _key, "-value:" + _value, "-path:" + _path, "-rootkey:" + _rootKey);
 			process();
