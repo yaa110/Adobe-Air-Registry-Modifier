@@ -9,7 +9,7 @@ This project intended to provide an integration between Adobe Air projects and W
 3. In order to make a standalone `process.exe` file which is used as `NativeProcess` executer, open Command Prompt:
   * `cd src-python`.
   * `c:\PATH_TO_PYTHON\python.exe setup.py py2exe`.
-4. Then, `process.exe` would be found in `dist` folder.
+4. Then, `process.exe` would be found in `dist` folder. Copy only `process.exe` file to your Adobe Air project (you don't need to include `.py` files in your Adobe Air project).
 
 **Note:** In Adobe Air manifest file, use `<supportedProfiles>extendedDesktop desktop</supportedProfiles>` to be allowed to use `NativeProcess`.
 
