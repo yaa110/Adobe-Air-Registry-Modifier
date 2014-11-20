@@ -72,5 +72,5 @@ function onError(e:Event):void {
 ```
 
 + Root Keys (as `_rootkey` parameter): `HKEY_LOCAL_MACHINE`, `HKEY_CLASSES_ROOT`, `HKEY_CURRENT_CONFIG`, `HKEY_CURRENT_USER` and `HKEY_USERS`
-+ Example of `_path` parameter: `Software\\Microsoft\\Office\\11.0\\Common\\General`
++ Example of `_path` parameter: `Software\\Microsoft\\Office\\11.0\\Common\\General` **Don't** use `/` rather than `\\`
 + Example of `_key` parameter: `RecentFiles`
