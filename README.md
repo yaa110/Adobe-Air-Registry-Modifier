@@ -18,7 +18,7 @@ This project intended to provide an integration between Adobe Air projects and W
 + Instantiate `RegistryModify` class:
 
 ```actionscript3
-RegistryModify rm = new RegistryModify("RELATIVE_PATH_TO_PROCESS.EXE");
+RegistryModify rm = new RegistryModify("RELATIVE/PATH/TO/process.exe");
 rm.addEventListener("ErrorData", onError);
 
 // Read the value of a Key
@@ -72,5 +72,5 @@ function onError(e:Event):void {
 ```
 
 + Root Keys (as `_rootkey` parameter): `HKEY_LOCAL_MACHINE`, `HKEY_CLASSES_ROOT`, `HKEY_CURRENT_CONFIG`, `HKEY_CURRENT_USER` and `HKEY_USERS`
-+ Example of `_path` parameter: `Software\Microsoft\Office\11.0\Common\General`
++ Example of `_path` parameter: `Software\\Microsoft\\Office\\11.0\\Common\\General`
 + Example of `_key` parameter: `RecentFiles`
