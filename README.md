@@ -17,7 +17,9 @@ This project intended to provide an integration between Adobe Air projects and W
 
 + Instantiate `RegistryModify` class:
 
-```actionscript3
+```as3
+import org.appsroid.RegistryModify;
+
 RegistryModify rm = new RegistryModify("RELATIVE/PATH/TO/process.exe");
 rm.addEventListener("ErrorData", onError);
 
