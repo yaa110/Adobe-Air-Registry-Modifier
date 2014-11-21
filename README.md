@@ -27,7 +27,7 @@ function onError(e:Event):void {
 }
 
 // Read the value of a Key
-rm.readValue("Root Key", "path_to_key_parent", "key_name");
+rm.readValue("Root Key", "path\\to\\parent", "key_name");
 rm.addEventListener("OutputData", onReadValue);
 
 function onReadValue(e:Event):void {
@@ -36,7 +36,7 @@ function onReadValue(e:Event):void {
 }
 
 // Write a value to a Key
-rm.writeValue("Root Key", "path_to_key_parent", "key_name", "value");
+rm.writeValue("Root Key", "path\\to\\parent", "key_name", "value");
 rm.addEventListener("OutputData", onWriteComplete);
 
 function onWriteComplete(e:Event):void {
@@ -45,7 +45,7 @@ function onWriteComplete(e:Event):void {
 }
 
 // Write a dword value to a Key
-rm.writeDwordValue("Root Key", "path_to_key_parent", "key_name", "value");
+rm.writeDwordValue("Root Key", "path\\to\\parent", "key_name", "value");
 rm.addEventListener("OutputData", onWriteDwordComplete);
 
 function onWriteDwordComplete(e:Event):void {
@@ -54,7 +54,7 @@ function onWriteDwordComplete(e:Event):void {
 }
 
 // Delete a Key
-rm.deleteKey("Root Key", "path_to_key");
+rm.deleteKey("Root Key", "path\\to\\key");
 rm.addEventListener("OutputData", onDeleteComplete);
 
 function onDeleteComplete(e:Event):void {
@@ -63,7 +63,7 @@ function onDeleteComplete(e:Event):void {
 }
 
 // Check if a Key exists
-rm.checkKey("Root Key", "path_to_key");
+rm.checkKey("Root Key", "path\\to\\key");
 rm.addEventListener("OutputData", onCheckComplete);
 
 function onCheckComplete(e:Event):void {
