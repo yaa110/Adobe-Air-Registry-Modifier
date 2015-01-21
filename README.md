@@ -11,6 +11,8 @@ This project intended to provide an integration between Adobe Air projects and W
   * `c:\PATH_TO_PYTHON\python.exe setup.py`
 4. Then, `process.exe` would be found in `dist` folder. Copy only `process.exe` file to your Adobe Air project (you don't need to include `.py` files in your Adobe Air project).
 
+**Or** [Download](https://github.com/yaa110/Adobe-Air-Registry-Modifier/releases) the executable file of `process.py`
+
 **Note:** In Adobe Air manifest file, use `<supportedProfiles>extendedDesktop desktop</supportedProfiles>` to be allowed to use `NativeProcess`.
 
 ## How to use
