@@ -1,3 +1,6 @@
+import _winreg
+import sys
+
 # switch (rootkey)
 root_keys = {
              "HKEY_LOCAL_MACHINE" : _winreg.HKEY_LOCAL_MACHINE,
